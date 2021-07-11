@@ -1,0 +1,12 @@
+"firstName": "Son",
+"lastName": "Goku",
+"designation": "Security",
+"nearestCity": "Earth",
+"tier": "TIER_TWO"
+
+
+"firstName": "Prince",
+"lastName": "Vegeta",
+"designation": "Security",
+"nearestCity": "Planet_Vegeta",
+"tier": "TIER_THREE"

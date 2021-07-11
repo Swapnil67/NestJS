@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, Query, UsePipes, ValidationPipe } from '@nestjs/common';
 // import { EmployeeStatus, EmployeeTier } from './employee.model';
 import { EmployeesService } from './employees.service';
-import { EmployeeSearchDto } from './dto/EmployeeSearch.dto';
+import { AllEmployeeSearchDto, EmployeeSearchDto } from './dto/EmployeeSearch.dto';
 import { EmployeeUpdateDto } from './dto/EmployeeUpdate.dto';
 import { EmployeeCreateDto } from './dto/EmployeeCreate.dto';
 import { EmployeeTierValidationPipe } from 'src/employee-tier-validation.pipe';
@@ -12,9 +12,7 @@ export class EmployeesController {
 
     @Get()
     @UsePipes(ValidationPipe)
-    async getAllEmployees(@Query() param: EmployeeSearchDto) {
-        console.log(ValidationPipe);
-        
+    async getAllEmployees(@Query() param: EmployeeSearchDto | AllEmployeeSearchDto) {
        if(Object.keys(param).length) {
            console.log('with Paran');
            return this.employeeService.employeeSearch(param)

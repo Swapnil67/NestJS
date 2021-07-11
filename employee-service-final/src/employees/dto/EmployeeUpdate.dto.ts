@@ -1,10 +1,10 @@
-import { EmployeeStatus, EmployeeTier } from "../employee.model";
+import { EmployeeStatus, EmployeeTier } from "../Employees.enums";
 
 export interface EmployeeUpdateDto {
     firstName?: string,
     lastName?: string,
-    destination?: string,
-    nearestCity?: string,
+    designation?: string,
+    nearestPlanet?: string,
     tier?: EmployeeTier,
     status?: EmployeeStatus,
 }
